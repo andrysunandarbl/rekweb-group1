@@ -16,8 +16,28 @@ package com.bl.rekweb.group1;
  * Author andry on 09/06/15.
  */
 public class AppMain {
+    
+    public void createForm(){
+        
+        //create new registration form
+        RegistrationForm myForm = new RegistrationForm();
+        myForm.setId("23/SH/2015");
+        myForm.setType(1);
+        myForm.setName("Dude");
+        myForm.setAddress("Cipulir");
+        myForm.setGrade("1");
+        myForm.setPhone("08124343434");
+        
+        //create new report
+        Report report = new Report();
+        report.setRekayasaWeb('A');
+        report.setDasarPemrogramanWeb('B');
+        myForm.setReport(report);
+        System.out.println(myForm);        
+    }
 
     public static void main(String[] args) {
-        System.out.println("This is group 1");
+        AppMain appMain = new AppMain();
+        appMain.createForm();
     }
 }
